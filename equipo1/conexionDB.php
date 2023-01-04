@@ -1,21 +1,19 @@
-<?php
+<?php 
 
-class equipo1{
-
-    function conectarDB()
-    {
+class conexion
+{
+    function conectarBD(){
         $server = "localhost";
-        $user = "root";
-        $password ="";
-        $baseDeDatos="sakila";
+        $usuario = "root";
+        $contraseña = "";
+        $basedeDatos = "citasvet";
 
-        $cadenaDeConexion = mysqli_connect($server,$user,$password,$baseDeDatos)
-        or die ("Error al conectar con la base de datos");
+        $cadenaDeConexion= mysqli_connect($server, $usuario, $contraseña, $basedeDatos)
+        or die ("Error  al conectar con la base de datos");
 
-        if($cadenaDeConexion){
-            echo"la conexion si sirve yay";
+        if ($cadenaDeConexion){
+            echo "conexion exitosa";
         }
     }
 }
-
 ?>
